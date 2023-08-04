@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "Node16",
+    "moduleResolution": "node",
+    "strict": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictBindCallApply": false,
+  }
+}

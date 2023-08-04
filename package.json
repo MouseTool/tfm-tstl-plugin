@@ -1,0 +1,20 @@
+{
+  "name": "tfm-tstl-plugin",
+  "version": "1.0.0",
+  "description": "Provides the plugin for bundling TypeScriptToLua code into Transformice-compatible Lua code.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MouseTool/tfm-tstl-plugin.git"
+  },
+  "main": "./plugins/plugin.ts",
+  "author": "Cassolette",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "typescript": "^5.1.6",
+    "typescript-to-lua": "^1.17.0"
+  },
+  "files": [
+    "plugins"
+  ]
+}
