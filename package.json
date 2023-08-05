@@ -1,6 +1,6 @@
 {
   "name": "tfm-tstl-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Provides the plugin for bundling TypeScriptToLua code into Transformice-compatible Lua code.",
   "repository": {
     "type": "git",
