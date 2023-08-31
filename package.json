@@ -6,9 +6,12 @@
     "type": "git",
     "url": "https://github.com/MouseTool/tfm-tstl-plugin.git"
   },
-  "main": "./plugins/plugin.ts",
+  "main": "./dist/plugin.js",
   "author": "Cassolette",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc --skipLibCheck"
+  },
   "devDependencies": {
     "@types/node": "^20.4.7",
     "source-map": "^0.7.4",
@@ -16,6 +19,6 @@
     "typescript-to-lua": "^1.17.0"
   },
   "files": [
-    "plugins"
+    "dist/**/*"
   ]
 }

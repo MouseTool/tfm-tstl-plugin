@@ -9,5 +9,7 @@
     "noImplicitAny": false,
     "noImplicitThis": true,
     "strictBindCallApply": false,
-  }
+    "outDir": "./dist"
+  },
+  "include": ["src"]
 }
