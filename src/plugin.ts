@@ -1,10 +1,15 @@
 import ts from "typescript";
 import * as tstl from "typescript-to-lua";
 import { TfmCustomPrinter } from "./printer";
+import { transformContinueStatementLegacy } from "./visitors";
 
 const entrypointRegex = /return (require\("[\w.]+", \.{3}\))\s*$/;
 
 const plugin: tstl.Plugin = {
+  visitors: {
+    [ts.SyntaxKind.ContinueStatement]: transformContinueStatementLegacy,
+  },
+
   beforeTransform(
     program: ts.Program,
     options: tstl.CompilerOptions,
