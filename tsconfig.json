@@ -3,7 +3,7 @@
     "target": "esnext",
     "lib": ["esnext"],
     "module": "Node16",
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "strict": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
