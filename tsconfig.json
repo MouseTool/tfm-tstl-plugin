@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["esnext"],
-    "module": "Node16",
-    "moduleResolution": "Node16",
+    "target": "es2019",
+    "lib": ["es2019"],
+    "types": ["node"],
+    "module": "commonjs",
+    "sourceMap": true,
+
     "strict": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
     "strictBindCallApply": false,
+
     "outDir": "./dist"
   },
   "include": ["src"]

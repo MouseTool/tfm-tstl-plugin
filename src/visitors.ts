@@ -1,4 +1,4 @@
-import ts from "typescript";
+import * as ts from "typescript";
 import { LuaTarget } from "typescript-to-lua";
 import { FunctionVisitor } from "typescript-to-lua/dist/transformation/context";
 import { transformContinueStatement } from "typescript-to-lua/dist/transformation/visitors/break-continue";
