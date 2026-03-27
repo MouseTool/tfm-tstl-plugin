@@ -1,6 +1,6 @@
-import path from "path";
+import * as path from "path";
 import { SourceNode } from "source-map";
-import ts from "typescript";
+import * as ts from "typescript";
 import * as tstl from "typescript-to-lua";
 import { cast, isNonNull } from "typescript-to-lua/dist/utils";
 
@@ -61,7 +61,7 @@ export class TfmCustomPrinter extends tstl.LuaPrinter {
       }\n    Generated on ${new Date().toUTCString()}\n    https://github.com/TypeScriptToLua/TypeScriptToLua\n]]--\n`
     );
 
-    if (entryModuleFilePath == sourceFile) {
+    if (entryModuleFilePath === sourceFile) {
       if (this.options.tstlVerbose) console.log("found entry point, modifying", sourceFile);
       finalResult.push(tfmPolyfills);
     }
