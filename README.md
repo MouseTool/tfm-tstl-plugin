@@ -1,20 +1,20 @@
 # tfm-tstl-plugin
 
-Provides the plugin for bundling [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua) code into Transformice-compatible Lua code.
+Provides the plugin for bundling [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua) (TSTL) code into Transformice-compatible Lua code.
 
-Recommend coupling this plugin with [tfm-tstl-types](https://www.npmjs.com/package/tfm-tstl-types) to extend Intellisense with Transformice environment definition. 
+Need type definitions for Transformice? Check out [tfm-tstl-types](https://www.npmjs.com/package/tfm-tstl-types).
 
 ## Install
 
-1. Get this package from npm
+1. Get this [package](https://www.npmjs.com/package/tfm-tstl-plugin) from npm
 
 ```sh
 npm install -D tfm-tstl-plugin
 # or
-yarn add -D tfm-tstl-plugin
+bun add --dev tfm-tstl-plugin
 ```
 
-2. Modify your tsconfig.json
+2. Modify your `tsconfig.json`
 
 ```diff
 {
@@ -25,7 +25,14 @@ yarn add -D tfm-tstl-plugin
     "luaPlugins": [
 +      {"name": "tfm-tstl-plugin"}
     ],
-    "luaTarget": "5.2"
+    "luaTarget": "5.2",
+    "luaLibImport": "require-minimal"
   }
 }
 ```
+
+## Compatibility
+
+The plugin will always have best compatibility with the version of TSTL specified under `devDependencies` in the [`package.json`](./package.json).
+
+Other versions of TSTL may work, but will not guaranteed given possible API changes. This is also due to the fact that the plugin relies on undocumented hacks (e.g. regex replacement after bundling) that may not be supported over time.
