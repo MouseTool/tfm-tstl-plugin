@@ -10,17 +10,18 @@ jobs:
     permissions:
       contents: read
       packages: write
+      # Required for OIDC
+      # https://docs.npmjs.com/trusted-publishers
+      id-token: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '18.x'
+          node-version: '24.x'
           registry-url: "https://registry.npmjs.org"
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v5
         with:
-          version: 8.10.2
+          version: 10.13.1
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
